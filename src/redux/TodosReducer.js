@@ -1,4 +1,4 @@
-import {  COMPLETE_TODO, CREATE_TODO, DELETE_TODO, FETCH_TODOS } from "./types"
+import {   CREATE_TODO,  FETCH_TODOS } from "./types"
 
 const initialState = {
     todos:[],

@@ -1,7 +1,7 @@
 import React from "react";
 import style from '../main.module.css'
 import img from './buck.png'
-import { compTodo } from "../../../redux/action";
+
 import {useDispatch} from 'react-redux'
 
 

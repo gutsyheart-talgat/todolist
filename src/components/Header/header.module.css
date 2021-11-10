@@ -1,0 +1,52 @@
+.head{
+    
+    display: flex;
+    justify-content: space-between;
+}
+.h1{
+    color: white;
+}
+.p{
+    color: white;
+}
+.btn{
+    background: #F5D57F;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+}
+@media(max-width:576px){
+    
+}
+@media (min-width: 576px) {
+}
+  
+  @media (min-width: 768px) {
+    
+  }
+  @media (min-width: 992px) {
+  }
+  
+  @media (min-width: 1200px) {
+    .head{
+        padding-top: 54px;
+    }
+    .h1{
+        font-size: 60px;
+        line-height: 82px;
+    }
+    .p{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .input{
+        width: 460px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+    .btn{
+        width: 287px;
+        height: 40px;
+    }
+  }

@@ -1,11 +1,16 @@
-import React from "react";
+import React,{Component} from "react";
 import Todo from "./Todo";
 import {connect} from 'react-redux'
 
 
-function CreatedTodo ({Todos}){
+class CreatedTodo extends Component {
+    renderTodos = () =>
+    this.props.Todos.map((todo) => <Todo  key={todo.id} todo={todo} />);
+
+  render() {
+    return <div>{this.renderTodos()}</div>;
+  }
     
-    return Todos.map(todo => <Todo todo={todo} key={todo.id}/>)
 }
 
 const mapStateToProps = state =>{
@@ -14,4 +19,8 @@ const mapStateToProps = state =>{
         Todos: state.todos.todos
     }
 }
-export default connect(mapStateToProps, null)(CreatedTodo)
+
+  
+  export default connect(mapStateToProps, null)(CreatedTodo);
+
+/*return Todos.map(todo => <Todo todo={todo} key={todo.id}/>)*/

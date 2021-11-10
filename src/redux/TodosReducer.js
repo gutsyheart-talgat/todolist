@@ -1,4 +1,4 @@
-import {   CREATE_TODO,  FETCH_TODOS } from "./types"
+import {   CREATE_TODO,  FETCH_TODOS , DELETE_TODO} from "./types"
 
 const initialState = {
     todos:[],
@@ -11,6 +11,8 @@ export default function todosReducer (state=initialState, action){
             
         case FETCH_TODOS:
             return {...state, fetchedtodos:action.payload}
+        case DELETE_TODO:
+            return {...state,todos: state.todos.filter((todo) => todo.id !== action.payload)}
         
         default: return state
     }

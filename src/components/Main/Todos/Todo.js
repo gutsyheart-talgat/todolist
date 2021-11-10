@@ -1,11 +1,12 @@
 import React from "react";
 import style from '../main.module.css'
 import img from './buck.png'
+import { deleteTodo } from "../../../redux/action";
 
 import {useDispatch} from 'react-redux'
 
 
- function Todo({todo}){
+ function Todo({todo, deleteTodo}){
     const dispatch = useDispatch()
     
     return(
@@ -19,7 +20,7 @@ import {useDispatch} from 'react-redux'
                 
                 type="checkbox"
                 />
-                <btn ><img src={img}/></btn>
+                <btn onClick={()=>dispatch(deleteTodo(todo.id))}><img src={img}/></btn>
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import { COMPLETE_TODO, CREATE_TODO, DELETE_TODO, FETCH_TODOS,HIDE_LOADER, SHOW_LOADER } from "./types";
+import {  CREATE_TODO,  FETCH_TODOS,HIDE_LOADER, SHOW_LOADER } from "./types";
 
 export function createTodo(todo){
     return{

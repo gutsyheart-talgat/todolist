@@ -5,7 +5,7 @@ import Todo from "./Todo";
 
 export default function FetchedTodo(){
     const dispatch = useDispatch()
-    
+    asd
     const todos = useSelector(state => state.todos.fetchedtodos)
     const load = useSelector(state => state.app.load)
     if(load){
@@ -28,7 +28,7 @@ export default function FetchedTodo(){
     
     return(
         
-        todos.map(todo => <Todo todo={todo} key={todo.id}/>)
+        todos.map(todo => <Todo todo={todo} key={todo.id} />)
     )
     
 }

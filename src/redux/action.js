@@ -1,4 +1,4 @@
-import {  CREATE_TODO,  DELETE_TODO,  FETCH_TODOS,HIDE_LOADER, SHOW_LOADER } from "./types";
+import {  CREATE_TODO,  DELETE_TODO,  FETCH_TODOS,HIDE_LOADER, SHOW_LOADER,TOGGLE_TODO } from "./types";
 
 export function createTodo(todo){
     return{
@@ -21,6 +21,12 @@ export function deleteTodo(id){
         type:DELETE_TODO,
         payload:id
     }
+}
+export function toggleTodo(){
+    return{
+        type:TOGGLE_TODO,
+    }
+    
 }
 
 

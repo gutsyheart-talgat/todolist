@@ -1,25 +1,25 @@
 import React,{Component} from "react";
 import Todo from "./Todo";
 import {connect} from 'react-redux'
-import Created from "./Created";
+import Created from "./Created"
 
-
-function CreatedTodo({Todos}){
-  function DeleteBtn(id, todos=Todos){
-    const [dlt, setDlt] = React.useState(todos)
-    setDlt(
-      dlt.filter(todo => todo.id !== id)
-    )
-    
+class CreatedTodo extends Component{
+  constructor(props){
+    super(props);
+    this.state = [this.props.Todos]
+    this.deleteBtn = this.deleteBtn.bind(this);
   }
-    
-  
-  return Todos.map((todo) => <Created DeleteBtn={DeleteBtn()} key={todo.id} todo={todo} />);
-
-
+  deleteBtn(id){
+    this.setState(
+      this.state.filter(todo=>todo.id !== id)
+    )
+  }
+  render(){
+    return this.props.Todos.map((todo) => <Created deleteBtn={this.deleteBtn} key={todo.id} todo={todo} />);
+  }
 }
 const mapStateToProps = state =>{
-    console.log(state)
+    
     return {
         Todos: state.todos.todos
     }

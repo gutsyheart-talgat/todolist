@@ -6,7 +6,7 @@ import { deleteTodo } from "../../../redux/action";
 import {useDispatch} from 'react-redux'
 
 
- function Created({todo, DeleteBtn}){
+ function Created({todo, deleteBtn}){
    
     return(
         <div className={style.todo}>
@@ -19,7 +19,7 @@ import {useDispatch} from 'react-redux'
                 
                 type="checkbox"
                 />
-                <btn onClick={()=>DeleteBtn(todo.id)}><img src={img}/></btn>
+                <btn onClick={()=>{deleteBtn(todo.id)}}><img src={img}/></btn>
             </div>
         </div>
     )

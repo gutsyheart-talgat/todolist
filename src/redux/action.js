@@ -18,8 +18,8 @@ export function hideLoader(){
 }
 export function deleteTodo(id){
     return{
-        type:DELETE_TODO,
-        payload:id
+        type:DELETE_TODO
+        
     }
 }
 export function toggleTodo(){

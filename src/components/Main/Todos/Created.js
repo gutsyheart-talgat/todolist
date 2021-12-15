@@ -1,25 +1,30 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import style from '../main.module.css'
-import img from './buck.png'
-import { deleteTodo } from "../../../redux/action";
 
-import {useDispatch} from 'react-redux'
-
-
- function Created({todo, deleteBtn}){
-   
+ function Created({todo}){
+     console.log(todo.completed)
+     function onToggle(id){
+        if(todo.id === id){
+            todo.completed = !todo.completed
+        }
+        console.log(todo.completed)
+        return todo
+    }
+    const comp = todo.completed
+    
     return(
-        <div className={style.todo}>
-            <div className={style.pad}>
-                <h1 className={style.name}>{todo.title}</h1>
-            </div>
-            <div className={style.btns}>
-                <input 
-                
-                
-                type="checkbox"
-                />
-                <btn onClick={()=>{deleteBtn(todo.id)}}><img src={img}/></btn>
+        <div className={comp ? style.done : style.not}>
+            <div className={style.todo}>
+                <div className={style.pad}>
+                    <h1 className={style.name}>{todo.title}</h1>
+                </div>
+                <div className={style.btns}>
+                    <input 
+                    onChange={()=>onToggle(todo.id)}
+                    type="checkbox"
+                    />
+                </div>
             </div>
         </div>
     )

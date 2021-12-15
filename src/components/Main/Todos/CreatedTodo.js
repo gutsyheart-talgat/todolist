@@ -7,15 +7,11 @@ class CreatedTodo extends Component{
   constructor(props){
     super(props);
     this.state = [this.props.Todos]
-    this.deleteBtn = this.deleteBtn.bind(this);
   }
-  deleteBtn(id){
-    this.setState(
-      this.state.filter(todo=>todo.id !== id)
-    )
-  }
+  
   render(){
-    return this.props.Todos.map((todo) => <Created deleteBtn={this.deleteBtn} key={todo.id} todo={todo} />);
+    console.log(this.props.Todos)
+    return this.props.Todos.map((todo) => <Created key={todo.id} todo={todo} />);
   }
 }
 const mapStateToProps = state =>{

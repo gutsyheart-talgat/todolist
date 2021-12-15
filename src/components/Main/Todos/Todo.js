@@ -1,9 +1,5 @@
 import React from "react";
 import style from '../main.module.css'
-import img from './buck.png'
-import { deleteTodo } from "../../../redux/action";
-
-
 
  function Todo({todo}){  
     function onToggle(id){
@@ -16,7 +12,7 @@ import { deleteTodo } from "../../../redux/action";
     }
     
     return(
-        <div >
+        <div className={todo.completed ? style.done : style.notDone}>
             <div className={style.todo} >
                 <div className={style.pad}>
                     <h1 className={style.name}>{todo.title}</h1>
@@ -27,7 +23,6 @@ import { deleteTodo } from "../../../redux/action";
                     onChange={()=>onToggle(todo.id)}
                     type="checkbox"
                     />
-                    <btn ><img src={img}/></btn>
                 </div>
             </div>
         </div>

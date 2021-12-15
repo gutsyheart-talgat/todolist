@@ -1,6 +1,9 @@
 .done{
     text-decoration: line-through;
 }
+.not{
+    text-decoration: none;
+}
 .p{
     
     color: #FFFFFF;

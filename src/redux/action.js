@@ -22,27 +22,8 @@ export function deleteTodo(id){
         
     }
 }
-export function toggleTodo(){
-    return{
-        type:TOGGLE_TODO,
-    }
-    
-}
 
 
 
 
-export function fetchTodo(){
-    return async dispatch => {
-        dispatch(showLoader())
-            const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=6')
-            const json = await response.json()
-            setTimeout(()=>{
-                dispatch({type:FETCH_TODOS, payload:json})
-                dispatch(hideLoader())
-            },500)
 
-        
-        
-    }
-}

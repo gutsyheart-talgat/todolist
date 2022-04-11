@@ -6,7 +6,6 @@ import CreatedTodo from "./CreatedTodo";
 export default function(){
     return (
     <div className={style.todos}>
-        <FetchedTodo/> 
         <CreatedTodo/>
     </div>
     )

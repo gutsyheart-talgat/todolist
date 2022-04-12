@@ -1,6 +1,0 @@
-export const CREATE_TODO = 'TODO/CREATE_TODO'
-export const FETCH_TODOS = 'TODO/FETCH_TODOS'
-export const SHOW_LOADER = 'APP/SHOW_LOADER'
-export const HIDE_LOADER = 'APP/HIDE_LOADER'
-export const DELETE_TODO ='TODO/DELETE_TODO'
-export const TOGGLE_TODO = 'TODO/TOGGLE_TODO'

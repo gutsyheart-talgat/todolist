@@ -1,5 +1,4 @@
 import React from "react";
-import FetchedTodo from "./FetchedTodo";
 import style from '../main.module.css'
 import CreatedTodo from "./CreatedTodo";
 

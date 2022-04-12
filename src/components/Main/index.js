@@ -1,6 +1,6 @@
 import React from "react";
 import style from './main.module.css';
-import Todos from './Todos/index'
+import Todos from './Todos'
 
 export default function Main (){
     

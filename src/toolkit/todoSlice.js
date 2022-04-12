@@ -4,7 +4,7 @@ const toolkitSlice = createSlice({
     name:"todo",
     initialState:{
         todos:[
-            
+            {id:1,title:"Ula Looh", completed:false}
         ]
     },
     reducers:{
